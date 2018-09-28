@@ -1,0 +1,784 @@
+Field LabelSorted Ascending,Sort Field Name,Sort Data Type,Sort Controlling Field,Sort Indexed,Column1
+_SYSTEM: AccountType,npe01__SYSTEM_AccountType__c,Text(100),Column1,FALSE,Show More
+_SYSTEM: IsIndividual,npe01__SYSTEMIsIndividual__c,Checkbox,,FALSE,Show More
+_SYSTEM: One2OneContact,npe01__One2OneContact__c,Lookup(Contact),,TRUE,Show More
+Account Email,Account_Email__c,Email,,FALSE,Show More
+Account Name,Name,Name,,TRUE,
+Account Name External ID,Account_Name_Ext_ID__c,Text(80) (External ID) (Unique Case Insensitive),,TRUE,Show More
+Account Number,AccountNumber,Text(40),,FALSE,
+Account Owner,OwnerId,Lookup(User),,TRUE,
+Account Record Type,RecordTypeId,Record Type,,TRUE,
+Account Site,Site,Text(80),,FALSE,
+Account Source,AccountSource,Picklist,,FALSE,Show More
+Account Status,Account_Status__c,Picklist,,FALSE,Show More
+Account Sub Type,Account_Sub_Type_ACF__c,Picklist,Account Type,FALSE,Show More
+Account Type,Account_Type_ACF__c,Picklist,,FALSE,Show More
+Additional Phone,Additional_Phone__c,Phone,,FALSE,Show More
+Alias Name,Alias_Name__c,Text(255),,FALSE,Show More
+Annual Revenue,AnnualRevenue,"Currency(18, 0)",,FALSE,
+Billing Address,BillingAddress,Address,,FALSE,
+Billing Address Record Type,CloudingoAgent__BAR__c,Text(1),,FALSE,Show More
+Billing Address Status,CloudingoAgent__BAS__c,"Number(18, 0)",,FALSE,Show More
+Billing Address Vacancy,CloudingoAgent__BAV__c,Text(1),,FALSE,Show More
+Billing Residential Delivery Indicator,CloudingoAgent__BRDI__c,Text(12),,FALSE,Show More
+Billing Timezone,CloudingoAgent__BTZ__c,Text(48),,FALSE,Show More
+Channel Program Level Name,ChannelProgramLevelName,Text(255),,FALSE,
+Channel Program Name,ChannelProgramName,Text(255),,FALSE,
+Convert To Person Account,pymt__Convert_To_Person_Account__c,Checkbox,,FALSE,Show More
+Country Code,Country_Code__c,Text(15),,FALSE,Show More
+Created By,CreatedById,Lookup(User),,FALSE,
+Current Academic Premier Partner,Current_Year__c,Checkbox,,FALSE,Show More
+Customer Portal Account,IsCustomerPortal,Checkbox,,FALSE,
+Data.com Key,Jigsaw,Text(20),,FALSE,
+Date Created,Date_Created__c,Formula (Date),,FALSE,Show More
+DATE for Premier Partner Year,DATE_for_Premier_Partner_Year__c,Roll-Up Summary (MAX Premier Partner Information),,FALSE,Show More
+Days Since Last Activity,Days_Since_Last_Activity__c,Formula (Number),,FALSE,Show More
+Description,Description,Long Text Area(32000),,FALSE,
+EMPLID,EMPLID__c,Text(7) (External ID) (Unique Case Insensitive),,TRUE,Show More
+Employees,NumberOfEmployees,"Number(8, 0)",,FALSE,
+Exceed ID,Exceed_ID__c,"Number(18, 0) (External ID) (Unique)",,TRUE,Show More
+Fax,Fax,Fax,,FALSE,
+First Donation Date,npe01__FirstDonationDate__c,Roll-Up Summary (MIN Opportunity),,FALSE,Show More
+Industry,Industry,Picklist,,FALSE,Show More
+Is Person Account,forcebrain__IsPersonalAccount__c,Checkbox,,FALSE,Show More
+Is Provider,forcebrain__IsProvider__c,Checkbox,,FALSE,Show More
+Last Donation Date,npe01__LastDonationDate__c,Roll-Up Summary (MAX Opportunity),,FALSE,Show More
+Last Modified By,LastModifiedById,Lookup(User),,FALSE,
+Legacy Account ID,Legacy_Account_ID__c,Text(50),,FALSE,Show More
+Legal Name,Legal_Name__c,Text(255),,FALSE,Show More
+Level,motivisu__Level__c,Picklist,,FALSE,Show More
+Lifetime Donation History (Amount),npe01__LifetimeDonationHistory_Amount__c,Roll-Up Summary (SUM Opportunity),,FALSE,Show More
+Lifetime Donation History (Number),npe01__LifetimeDonationHistory_Number__c,Roll-Up Summary (COUNT Opportunity),,FALSE,Show More
+Main Geographic Location,Main_Geographic_Location__c,Picklist (Multi-Select),,FALSE,Show More
+Master Account,EXECED_Master_Account__c,Lookup(Account),,TRUE,Show More
+Matching Gift Champion,Matching_Gift_Champion__c,Lookup(Contact),,TRUE,Show More
+Matching Gift Comments,Matching_Gift_Comments__c,Long Text Area(32768),,FALSE,Show More
+Matching Gift Company,Matching_Gift_Company__c,Checkbox,,FALSE,Show More
+Most Recent Premier Partner Year,Most_Recent_Premier_Partner_Year__c,Roll-Up Summary (MAX Premier Partner Information),,FALSE,Show More
+NAICS Code,NAICS_Code__c,Text(20),,FALSE,Show More
+Onboarding Duration,TASKRAY__trOnboardingDuration__c,Formula (Number),,FALSE,Show More
+Onboarding End,TASKRAY__trOnboardingEndDate__c,Date,,FALSE,Show More
+Onboarding Start,TASKRAY__trOnboardingStartDate__c,Date,,FALSE,Show More
+Ownership,Ownership,Picklist,,FALSE,Show More
+Parent Account,ParentId,Hierarchy,,TRUE,
+Parent Child Acct for all Corporate Gift,Parent_Child_Acct_for_all_Corporate_Gift__c,Text(255),,FALSE,Show More
+Partner Account,IsPartner,Checkbox,,FALSE,
+Phone,Phone,Phone,,FALSE,
+Rating,Rating,Picklist,,FALSE,Show More
+Recruiting Market Segmentation,Recruiting_Market_Segmentation__c,Picklist,,FALSE,Show More
+Relationship Report,Relationship_Report__c,Picklist (Multi-Select),,FALSE,Show More
+Shipping Address,ShippingAddress,Address,,FALSE,
+Shipping Address Record Type,CloudingoAgent__SAR__c,Text(1),,FALSE,Show More
+Shipping Address Status,CloudingoAgent__SAS__c,"Number(18, 0)",,FALSE,Show More
+Shipping Address Vacancy,CloudingoAgent__SAV__c,Text(1),,FALSE,Show More
+Shipping Residential Delivery Indicator,CloudingoAgent__SRDI__c,Text(12),,FALSE,Show More
+Shipping Timezone,CloudingoAgent__STZ__c,Text(48),,FALSE,Show More
+SIC Code,Sic,Text(20),,FALSE,
+SIC Description,SicDesc,Text(80),,FALSE,
+Ticker Symbol,TickerSymbol,Content(20),,FALSE,
+Total Accepted Full-Time Offers,Total_Accepted_Full_Time_Offers__c,Roll-Up Summary (COUNT CMC Employment),,FALSE,Show More
+Total Accepted Internship Offers,Total_Accept_Internship_Offers__c,Roll-Up Summary (COUNT CMC Employment),,FALSE,Show More
+Total Corporate Gifts,Total_Corporate_Gifts__c,Roll-Up Summary (COUNT Opportunity),,FALSE,Show More
+Total Corporate Projects,Total_Corporate_Projects_del__c,Roll-Up Summary (COUNT Opportunity),,FALSE,Show More
+Tracked Company,Tracked_Company__c,Checkbox,,FALSE,Show More
+Type,Type,Picklist,,FALSE,Show More
+Ultimate Parent Account,Ultimate_Parent_Account__c,Formula (Text),,FALSE,Show More
+Website,Website,URL(255),,FALSE,
+Website,Website,URL(255),,FALSE,
+Contact,,,,,
+Field LabelSorted Ascending,Sort Field Name,Sort Data Type,Sort Controlling Field,Sort Indexed,
+_SYSTEM: ACCOUNT PROCESSOR,npe01__SystemAccountProcessor__c,Picklist,,FALSE,Show More
+_SYSTEM: IsIndividual - DEPRECATED,npe01__SystemIsIndividual__c,Checkbox,,FALSE,Show More
+Academic Area (Non-Member),Academic_Area_Non_Member__c,Picklist,,FALSE,Show More
+Academic Area (Primary),Academic_Area_Primary__c,Picklist,,FALSE,Show More
+Academic Area (Secondary),Academic_Area_Secondary__c,Picklist,,FALSE,Show More
+Accepted FT Offer Date,Accepted_Offer_Date_from_CMC_Employment__c,Date,,FALSE,Show More
+Accepted Full-Time Job with,Accepted_Full_Time_Job_with_ACF__c,Text(255),,FALSE,Show More
+Accepted Full-Time Offers,Accepted_Offers__c,Roll-Up Summary (COUNT CMC Employment),,FALSE,Show More
+Accepted Internship Job with,Accepted_Internship_Job_with_ACF__c,Text(255),,FALSE,Show More
+Accepted Internship Offer Date,Accepted_Internship_Offer_Date__c,Date,,FALSE,Show More
+Accepted Internship Offers,Accepted_Internship_Offers__c,Roll-Up Summary (COUNT CMC Employment),,FALSE,Show More
+Account Name,EXECED_Account_Name__c,Formula (Text),,FALSE,Show More
+Account Name,AccountId,Lookup(Account),,TRUE,
+Additional Do Not Contact Information,Additional_Do_Not_Contact_Information__c,Text Area(255),,FALSE,Show More
+Age,forcebrain__Age__c,Formula (Number),,FALSE,Show More
+Age Range,EXECED_Age_Range__c,Picklist,,FALSE,Show More
+Allow Customer Portal Self-Registration,CanAllowPortalSelfReg,Checkbox,,FALSE,
+Alternate Email,npe01__AlternateEmail__c,Email,,FALSE,Show More
+Alumni Contact Information Update,Alumni_Address_Update__c,Long Text Area(32768),,FALSE,Show More
+Appointment Date,Appointment_Date__c,Date,,FALSE,Show More
+Appointment Term End Date,Appointment_Term_End_Date__c,Date,,FALSE,Show More
+Assistant,AssistantName,Text(40),,FALSE,
+Assistant Email,Assistant_Email__c,Text(40),,FALSE,Show More
+Asst. Phone,AssistantPhone,Phone,,FALSE,
+Badge Name,EXECED_Badge_Name__c,Text(100),,FALSE,Show More
+BIO,EXECED_BIO__c,Rich Text Area(32768),,FALSE,Show More
+Birthdate,Birthdate,Date,,FALSE,
+CF Area,CF_Area__c,Text(255),,FALSE,Show More
+CF Area Code,CF_Area_Code__c,Text(32),,FALSE,Show More
+CF Region,CF_Region__c,Text(255),,FALSE,Show More
+Class Year,Class_Year__c,Text(25),,FALSE,Show More
+CMC Advisor,CMC_Advisor_ACF__c,Lookup(User),,TRUE,Show More
+Completed Mock Interview,Completed_Mock_Interview__c,Checkbox,,FALSE,Show More
+Consulting Focus,Consulting_Focus__c,Checkbox,,FALSE,Show More
+Contact Email Status,CloudingoAgent__CES__c,"Number(18, 0)",,FALSE,Show More
+Contact Name,Full_Name_ACF__c,Formula (Text),,FALSE,Show More
+Contact Owner,OwnerId,Lookup(User),,TRUE,
+Contact Record Type,RecordTypeId,Record Type,,TRUE,
+Contact Type,Contact_Type__c,Picklist (Multi-Select),,FALSE,Show More
+Corporate Engagement Area of Interest,Corporate_Engagement_Area_of_Interest__c,Picklist (Multi-Select),,FALSE,Show More
+Country Code,Country_Code__c,Text(15),,FALSE,Show More
+Created By,CreatedById,Lookup(User),,FALSE,
+Currently Working,forcebrain__CurrentlyWorking__c,Checkbox,,FALSE,Show More
+Data.com Key,Jigsaw,Text(20),,FALSE,
+Date Created,Date_Created__c,Formula (Date),,FALSE,Show More
+Deceased,AAD_DECEASED__c,Checkbox,,FALSE,Show More
+Department,Department,Text(80),,FALSE,
+Deprecated,pymt__Google_Buyer_Id__c,"Number(18, 0)",,FALSE,Show More
+Description,Description,Long Text Area(32000),,FALSE,
+Diversity Affiliation,Diversity_Affiliation__c,Picklist (Multi-Select),,FALSE,Show More
+Do Not Call,DoNotCall,Checkbox,,FALSE,
+Do Not Contact,Do_Not_Contact__c,Checkbox,,FALSE,Show More
+Email,Email,Email,,TRUE,
+Email Opt Out,HasOptedOutOfEmail,Checkbox,,FALSE,
+EMBA Boardroom,EMBA_Boardroom__c,Picklist,,FALSE,Show More
+EMBA Boardroom Team,EMBA_Boardroom_Team__c,Text(30),,FALSE,Show More
+EMBA Section,EMBA_Section__c,Picklist,,FALSE,Show More
+Emergency Contact First Name,Emergency_Contact_First_Name__c,Text(100),,FALSE,Show More
+Emergency Contact Last Name,Emergency_Contact_Last_Name__c,Text(100),,FALSE,Show More
+Emergency Contact Phone,Emergency_Contact_Phone__c,Phone,,FALSE,Show More
+Emergency Contact Relationship,Emergency_Contact_Relationship__c,Text(100),,FALSE,Show More
+Emeritus Faculty,Emeritus_Faculty__c,Checkbox,,FALSE,Show More
+EMPLID,EMPLID__c,Text(7) (External ID) (Unique Case Insensitive),,TRUE,Show More
+Employee Status,Employee_Status__c,Picklist,,FALSE,Show More
+Employment Seeking Status,Employment_Seeking_Status__c,Picklist,,FALSE,Show More
+Endowed Title(s),Endowed_Titles__c,Text(255),,FALSE,Show More
+English Proficiency,EXECED_English_Proficiency__c,Checkbox,,FALSE,Show More
+Enrollment Status,Enrollment_Status__c,Text(50),,FALSE,Show More
+Ethnicity,Ethnicity__c,Text(255),,FALSE,Show More
+Exceed Contact ID,Exceed_Contact_ID__c,"Number(18, 0) (External ID) (Unique)",,TRUE,Show More
+Faculty Rank,Faculty_Rank__c,Picklist,,FALSE,Show More
+Fax,Fax,Fax,,FALSE,
+Fax Opt Out,HasOptedOutOfFax,Checkbox,,FALSE,
+FERPA Flag,FERPA_Flag__c,Text(5),,FALSE,Show More
+Full Name,Full_Name__c,Formula (Text),,FALSE,Show More
+Full Name,forcebrain__Full_Name__c,Formula (Text),,FALSE,Show More
+Full Time Equivalent (FTE),Full_Time_Equivalent_FTE__c,"Number(3, 2)",,FALSE,Show More
+Full-Time Job Status,FT_Job_Status__c,Formula (Text),,FALSE,Show More
+FullSBID,FullSBID__c,Text(200) (External ID) (Unique Case Insensitive),,TRUE,Show More
+Gender,forcebrain__Gender__c,Picklist,,FALSE,Show More
+Gender,EXECED_Gender__c,Picklist,,FALSE,Show More
+Gender,Gender__c,Picklist,,FALSE,Show More
+Geocode Success?,forcebrain__Geocode_Success__c,Formula (Text),,FALSE,Show More
+Giving Area,Giving_Area__c,Text(200),,FALSE,Show More
+GMAT,GMAT__c,"Number(3, 0)",,FALSE,Show More
+Google Analytics Campaign,pi__utm_campaign__c,Text(255),,FALSE,Show More
+Google Analytics Content,pi__utm_content__c,Text(255),,FALSE,Show More
+Google Analytics Medium,pi__utm_medium__c,Text(255),,FALSE,Show More
+Google Analytics Source,pi__utm_source__c,Text(255),,FALSE,Show More
+Google Analytics Term,pi__utm_term__c,Text(255),,FALSE,Show More
+Home Address,npe01__Home_Address__c,Formula (Text),,FALSE,Show More
+Home Phone,HomePhone,Phone,,FALSE,
+Hosted Profiles,pymt__Hosted_Profiles__c,Long Text Area(32768),,FALSE,Show More
+"If you gender self-describe, how?",EXECED_If_you_gender_self_describe_how__c,Text(75),,FALSE,Show More
+IGO/Prospect Manager,IGO_Prospect_Manager__c,Lookup(Contact),,TRUE,Show More
+IGO/Prospect Manager Email,IGO_Prospect_Manager_Email__c,Formula (Text),,FALSE,Show More
+Immersion,Immersion_read_only__c,Text(255),,FALSE,Show More
+Internship Job Status,Intern_Job_Status__c,Formula (Text),,FALSE,Show More
+Is Person Account,forcebrain__IsPersonalAccount__c,Checkbox,,FALSE,Show More
+Is Provider,forcebrain__IsProvider__c,Checkbox,,FALSE,Show More
+Job Function,EXECED_Job_Function__c,Picklist,,FALSE,Show More
+Job Level,EXECED_Job_Level__c,Picklist,,FALSE,Show More
+Job Title,EXECED_Job_Title__c,Picklist,,FALSE,Show More
+Jpay Id,Jpay_Id__c,Text(20) (External ID),,TRUE,Show More
+Languages,forcebrain__Languages__c,Picklist (Multi-Select),,FALSE,Show More
+Last CMC Student Meeting in Days,Last_CMC_Student_Meeting_in_Days__c,Formula (Number),,FALSE,Show More
+Last Modified,Last_Modified__c,Formula (Date),,FALSE,Show More
+Last Modified By,LastModifiedById,Lookup(User),,FALSE,
+Last Modifier to 'Do Not Contact' field,Last_Modifier_to_Do_Not_Contact_field__c,Text(255),,FALSE,Show More
+Last Stay-in-Touch Request Date,LastCURequestDate,Date/Time,,FALSE,
+Last Stay-in-Touch Save Date,LastCUUpdateDate,Date/Time,,FALSE,
+Last Transaction Date,npe01__Last_Donation_Date__c,Formula (Date),,FALSE,Show More
+Latest meeting date,latest_meeting_date__c,Roll-Up Summary (MAX Attendees),,FALSE,Show More
+Latitude,forcebrain__Latitude__c,"Number(3, 15)",,FALSE,Show More
+Lead Source,LeadSource,Picklist,,FALSE,Show More
+Legacy Contact ID,Legacy_Contact_ID__c,Text(50),,FALSE,Show More
+Lifetime Transaction Total,npe01__Lifetime_Giving_History_Amount__c,Formula (Currency),,FALSE,Show More
+LinkedIn,LinkedIn__c,URL(255),,FALSE,Show More
+LinkedIn Subscription Program,LinkedIn_Subscription_Program__c,Checkbox,,FALSE,Show More
+Longitude,forcebrain__Longitude__c,"Number(3, 15)",,FALSE,Show More
+Mailable/Living,AAD_MAILABLE_LIVING__c,Checkbox,,FALSE,Show More
+Mailing Address Record Type,CloudingoAgent__MAR__c,Text(1),,FALSE,Show More
+Mailing Address Status,CloudingoAgent__MAS__c,"Number(18, 0)",,FALSE,Show More
+Mailing Address Vacancy,CloudingoAgent__MAV__c,Text(1),,FALSE,Show More
+Mailing Residential Delivery Indicator,CloudingoAgent__MRDI__c,Text(12),,FALSE,Show More
+Mailing Timezone,CloudingoAgent__MTZ__c,Text(48),,FALSE,Show More
+Managed By JS,Managed_By_JS__c,Checkbox,,FALSE,Show More
+Member Pricing Enabled,pymt__Member_Pricing_Enabled__c,Checkbox,,FALSE,Show More
+Middle Initial/Name,EXECED_Middle_Initial_Name__c,Text(30),,FALSE,Show More
+Middle Name,Middle_Name__c,Text(50),,FALSE,Show More
+Mobile,MobilePhone,Phone,,FALSE,
+Mobile Country Code,et4ae5__Mobile_Country_Code__c,Picklist,,FALSE,Show More
+Mobile Opt Out,et4ae5__HasOptedOutOfMobile__c,Checkbox,,FALSE,Show More
+Name,Name,Name,,TRUE,
+Name on Certificate,EXECED_Name_on_Certificate__c,Text(128),,FALSE,Show More
+Needs Score Synced,pi__Needs_Score_Synced__c,Checkbox,,FALSE,Show More
+NetID,NetID__c,Text(7) (External ID),,TRUE,Show More
+Not Seeking Reason,Not_Seeking_Reason__c,Picklist,,FALSE,Show More
+Number of Active Enrollments,Number_of_Active_Enrollments__c,Roll-Up Summary (COUNT Enrollment),,FALSE,Show More
+Number of CMC Alumni Meetings,Number_of_CMC_Alumni_Meetings__c,Roll-Up Summary (COUNT Attendees),,FALSE,Show More
+Number of CMC Student Meetings,Number_of_CMC_Student_Meetings__c,Roll-Up Summary (COUNT Attendees),,FALSE,Show More
+Number of Graduated Enrollments,Number_of_Graduated_Enrollments__c,Roll-Up Summary (COUNT Enrollment),,FALSE,Show More
+Number of Pending FT Offers,Number_of_Pending_FT_Offers__c,Roll-Up Summary (COUNT CMC Employment),,FALSE,Show More
+Number of Pending Internship Offers,Number_of_Pending_Internship_Offers__c,Roll-Up Summary (COUNT CMC Employment),,FALSE,Show More
+Offer Date Month,Offer_Date_Month__c,Formula (Number),,FALSE,Show More
+OK to Email,AAD_OK_TO_EMAIL__c,Checkbox,,FALSE,Show More
+Ok to List or Publish,AAD_OK_TO_LIST_OR_PUBLISH__c,Checkbox,,FALSE,Show More
+OK to Mail,AAD_OK_TO_MAIL__c,Checkbox,,FALSE,Show More
+OK to Phone,AAD_OK_TO_PHONE__c,Checkbox,,FALSE,Show More
+OK to Solicit,AAD_OK_TO_SOLICIT__c,Checkbox,,FALSE,Show More
+OK to Solicit Via Email,AAD_OK_TO_SOLICIT_VIA_EMAIL__c,Checkbox,,FALSE,Show More
+On Campus Interview Date,On_Campus_Interview_Date__c,Date/Time,,FALSE,Show More
+Organization Type,npe01__Organization_Type__c,Formula (Text),,FALSE,Show More
+Other Address,npe01__Other_Address__c,Formula (Text),,FALSE,Show More
+Other Address,OtherAddress,Address,,FALSE,
+Other Address Record Type,CloudingoAgent__OAR__c,Text(1),,FALSE,Show More
+Other Address Status,CloudingoAgent__OAS__c,"Number(18, 0)",,FALSE,Show More
+Other Address Vacancy,CloudingoAgent__OAV__c,Text(1),,FALSE,Show More
+Other Phone,OtherPhone,Phone,,FALSE,
+Other Residential Delivery Indicator,CloudingoAgent__ORDI__c,Text(12),,FALSE,Show More
+Other Timezone,CloudingoAgent__OTZ__c,Text(48),,FALSE,Show More
+Pardot Campaign,pi__campaign__c,Text(255),,FALSE,Show More
+Pardot Comments,pi__comments__c,Long Text Area(32000),,FALSE,Show More
+Pardot Conversion Date,pi__conversion_date__c,Date/Time,,FALSE,Show More
+Pardot Conversion Object Name,pi__conversion_object_name__c,Text(255),,FALSE,Show More
+Pardot Conversion Object Type,pi__conversion_object_type__c,Text(255),,FALSE,Show More
+Pardot Created Date,pi__created_date__c,Date/Time,,FALSE,Show More
+Pardot First Activity,pi__first_activity__c,Date/Time,,FALSE,Show More
+Pardot First Referrer,pi__first_touch_url__c,Long Text Area(65000),,FALSE,Show More
+Pardot First Referrer Query,pi__first_search_term__c,Text(255),,FALSE,Show More
+Pardot First Referrer Type,pi__first_search_type__c,Text(255),,FALSE,Show More
+Pardot Grade,pi__grade__c,Text(10),,FALSE,Show More
+Pardot Hard Bounced,pi__pardot_hard_bounced__c,Checkbox,,FALSE,Show More
+Pardot Last Activity,pi__last_activity__c,Date/Time,,FALSE,Show More
+Pardot Last Scored At,pi__Pardot_Last_Scored_At__c,Date/Time,,FALSE,Show More
+Pardot Notes,pi__notes__c,Long Text Area(32000),,FALSE,Show More
+Pardot Score,pi__score__c,"Number(18, 0)",,FALSE,Show More
+Pardot URL,pi__url__c,URL(255),,FALSE,Show More
+Partner Email,Partner_Email__c,Email,,FALSE,Show More
+Partner First Name,Partner_First_Name__c,Text(100),,FALSE,Show More
+Partner Last Name,Partner_Last_Name__c,Text(100),,FALSE,Show More
+PayPal Payer Id,pymt__PayPal_Payer_Id__c,Text(32),,FALSE,Show More
+Personal Email,npe01__HomeEmail__c,Email,,FALSE,Show More
+Phone,Phone,Phone,,FALSE,
+Phone Reminder Opt Out,forcebrain__Voice_opt_out__c,Checkbox,,FALSE,Show More
+Phoneable,AAD_PHONEABLE__c,Checkbox,,FALSE,Show More
+Picture Display,Picture_Display__c,Formula (Text),,FALSE,Show More
+Picture Thumbnail Url,Picture_Thumbnail_Url__c,URL(255),,FALSE,Show More
+Picture URL,Picture_URL__c,URL(255),,FALSE,Show More
+Preferred Email,npe01__Preferred_Email__c,Picklist,,FALSE,Show More
+Preferred Name,Preferred_Name__c,Text(60),,FALSE,Show More
+Preferred Phone,npe01__PreferredPhone__c,Picklist,,FALSE,Show More
+Primary Address,MailingAddress,Address,,FALSE,
+Primary Address Type,npe01__Primary_Address_Type__c,Picklist,,FALSE,Show More
+Primary Citizenship,Primary_Citizenship__c,Picklist,,FALSE,Show More
+Primary Community Profile,motivisu__Primary_Community_Profile__c,Lookup(Community Profile),,TRUE,Show More
+Primary Role,motivisu__Primary_Role__c,Picklist,,FALSE,Show More
+Private,npe01__Private__c,Checkbox,,FALSE,Show More
+Program,MBA_Program__c,Text(100),,FALSE,Show More
+Promotion Date,Promotion_Date__c,Date,,FALSE,Show More
+PS Provisioning,PS_Upload_Date__c,Text(100),,FALSE,Show More
+Received FT Offers,Received_FT_Offers__c,Roll-Up Summary (COUNT CMC Employment),,FALSE,Show More
+Received Internship Offers,Received_Internship_Offers__c,Roll-Up Summary (COUNT CMC Employment),,FALSE,Show More
+Reg Completed,motivisu__Reg_Completed__c,Date/Time,,FALSE,Show More
+Reg General Info Completed,motivisu__Reg_General_Info_Completed__c,Date/Time,,FALSE,Show More
+Reg Interests Completed,motivisu__Reg_Interests_Completed__c,Date/Time,,FALSE,Show More
+Reg Picture Completed,motivisu__Reg_Picture_Completed__c,Date/Time,,FALSE,Show More
+Reg T&C Completed,motivisu__Reg_T_C_Completed__c,Date/Time,,FALSE,Show More
+Reports To,ReportsToId,Lookup(Contact),,TRUE,
+Resume Submitted,Resume_Submitted__c,Checkbox,,FALSE,Show More
+Sabbatical Taken Term,Sabbatical_Taken_Term__c,Lookup(Academic Term),,TRUE,Show More
+Schedule Now URL,forcebrain__Schedule_Now_URL__c,Formula (Text),,FALSE,Show More
+Schedule Now URL Text,forcebrain__Schedule_Now_URL_Text__c,Formula (Text),,FALSE,Show More
+School Appointment,School_Appointment__c,Picklist,,FALSE,Show More
+Secondary Address Type,npe01__Secondary_Address_Type__c,Picklist,,FALSE,Show More
+Secondary Citizenship,Secondary_Citizenship__c,Picklist,,FALSE,Show More
+Secondary Email,EXECED_Secondary_Email__c,Email,,FALSE,Show More
+Self-Scheduling Site Setting,forcebrain__Self_Scheduling_Site_Setting__c,Lookup(Self-Scheduling Site Setting),,TRUE,Show More
+Specialty,forcebrain__Specialty__c,Picklist,,FALSE,Show More
+Status,Status__c,Picklist,,FALSE,Show More
+Student Comments,Student_Comments__c,Long Text Area(32000),,FALSE,Show More
+Suffix,Suffix__c,Text(20),,FALSE,Show More
+Suffix,EXECED_Suffix__c,Text(20),,FALSE,Show More
+T-Shirt Size (unisex),T_Shirt_Size_unisex__c,Picklist,,FALSE,Show More
+Target Function,Target_Function__c,Picklist,,FALSE,Show More
+Target Industry,Target_Industry__c,Picklist,,FALSE,Show More
+Termination Date,Termination_Date__c,Date,,FALSE,Show More
+Text Reminder Opt Out,forcebrain__Text_opt_out__c,Checkbox,,FALSE,Show More
+Title,Title,Text(128),,FALSE,
+Type of Account,npe01__Type_of_Account__c,Formula (Text),,FALSE,Show More
+US Military,US_Military__c,Picklist,,FALSE,Show More
+US Military Branch,US_Military_Branch__c,Picklist,,FALSE,Show More
+US Work Authorized,US_Work_Authorized__c,Checkbox,,FALSE,Show More
+User,forcebrain__User__c,Lookup(User),,TRUE,Show More
+UserId,forcebrain__UserId__c,Text(20) (Unique Case Sensitive),,TRUE,Show More
+Visa Status,Visa_Status__c,Text(10),,FALSE,Show More
+Work Address,npe01__Work_Address__c,Formula (Text),,FALSE,Show More
+Work Email,npe01__WorkEmail__c,Email,,FALSE,Show More
+Work Phone,npe01__WorkPhone__c,Phone,,FALSE,Show More
+Application,,,,,
+Field LabelSorted Ascending,Sort Field Name,Sort Data Type,Sort Controlling Field,Sort Indexed,
+ADA Accomodations,ADA_Accomodations__c,Text Area(255),,FALSE,Show More
+Applicant,Applicant__c,Lookup(Contact),,TRUE,Show More
+Application ID,Name,Auto Number,,TRUE,Show More
+Arrival Date,Arrival_Date__c,Date/Time,,FALSE,Show More
+Balance,Balance__c,Formula (Currency),,FALSE,Show More
+Billing,Billing__c,Lookup(Contact),,TRUE,Show More
+Cart,Cart__c,Lookup(Cart),,TRUE,Show More
+Created By,CreatedById,Lookup(User),,FALSE,
+Declaration: Cancellation Policy,Declaration_Cancellation_Policy__c,Checkbox,,FALSE,Show More
+Declaration: Candid Photo,Declaration_Candid_Photo__c,Picklist,,FALSE,Show More
+Declaration: English Proficiency,Declaration_English_Proficiency__c,Checkbox,,FALSE,Show More
+Declaration: Pay Minimum Deposit,Declaration_Pay_Minimum_Deposit__c,Checkbox,,FALSE,Show More
+Departure Date,Departure_Date__c,Date/Time,,FALSE,Show More
+Describe Scope of Your Responsibilities,Describe_Scope_of_Your_Responsibilities__c,Text Area(255),,FALSE,Show More
+Describe Your Organization,Describe_Your_Organization__c,Text Area(255),,FALSE,Show More
+Dietary Restrictions,Dietary_Restrictions__c,Text Area(255),,FALSE,Show More
+Discount Code,DiscountCode__c,Lookup(Discount Code),,TRUE,Show More
+Emergency Contact Name,Emergency_Contact_Name__c,Text(100),,FALSE,Show More
+Emergency Contact Phone,Emergency_Contact_Phone__c,Phone,,FALSE,Show More
+Exceed ID,Exceed_ID__c,"Number(18, 0) (External ID) (Unique)",,TRUE,Show More
+Financial Transaction,Financial_Transaction__c,Lookup(Financial Transaction),,TRUE,Show More
+Group Planner,Group_Planner__c,Lookup(Contact),,TRUE,Show More
+Hospitality Schools Attended,Hospitality_Schools_Attended__c,Text Area(255),,FALSE,Show More
+Hotel Accommodations (Property Name),Hotel_Accommodations_Property_Name__c,Text(100),,FALSE,Show More
+How did you hear about us?,How_did_you_hear_about_us__c,Picklist,,FALSE,Show More
+Last Modified By,LastModifiedById,Lookup(User),,FALSE,
+List the top 3 issues (essay),List_the_top_3_issues_essay__c,Long Text Area(32768),,FALSE,Show More
+Name of Person Authorizing Participation,Name_of_Person_Authorizing_Participation__c,Text(100),,FALSE,Show More
+Next Position in Career Path,Next_Position_in_Career_Path__c,Text(100),,FALSE,Show More
+Organization Authorizing Participation,Organization_Authorizing__c,Text(100),,FALSE,Show More
+Other Work Experience,Other_Work_Experience__c,Text Area(255),,FALSE,Show More
+Owner,OwnerId,"Lookup(User,Group)",,TRUE,
+PO Number,PO_Number__c,Text(50),,FALSE,Show More
+Preferred Payment Method,Preferred_Payment_Method__c,Picklist,,FALSE,Show More
+Requires Payment,Requires_Payment__c,Formula (Checkbox),,FALSE,Show More
+Status,Status__c,Picklist,,FALSE,Show More
+Submitted Date,Submitted_Date__c,Date,,FALSE,Show More
+Supervisor Title,Supervisor_Title__c,Text(50),,FALSE,Show More
+Terms Accepted,Terms_Accepted__c,Checkbox,,FALSE,Show More
+Total,Total__c,"Currency(16, 2)",,FALSE,Show More
+Total Discount,Total_Discount__c,"Currency(16, 2)",,FALSE,Show More
+Total Paid,Total_Paid__c,"Currency(16, 2)",,FALSE,Show More
+Which Level?,Which_Level__c,Picklist,,FALSE,Show More
+Years in Current Position,Years_in_Current_Position__c,Text(15),,,
+Financial Transactions,,,,,
+Field LabelSorted Ascending,Sort Field Name,Sort Data Type,Sort Controlling Field,Sort Indexed,
+Aging,Aging__c,Formula (Number),,FALSE,Show More
+Balance,Balance__c,Formula (Currency),,FALSE,Show More
+Billing Contact,Billing_Contact__c,Lookup(Contact),,TRUE,Show More
+Billing Contact Email,Billing_Contact_Email__c,Formula (Text),,FALSE,Show More
+Cart,Cart__c,Lookup(Cart),,TRUE,Show More
+Check #,Check__c,Text(20),,FALSE,Show More
+Comments for Invoice,Comments_for_Invoice__c,Long Text Area(500),,FALSE,Show More
+Confirmation,Confirmation__c,Text(80),,FALSE,Show More
+Cornell Department,Cornell_Department__c,Lookup(Account),,TRUE,Show More
+Created By,CreatedById,Lookup(User),,FALSE,
+Credit Card Authorization #,Credit_Card_Authorization__c,Text(20),,FALSE,Show More
+Custom Program Invoice,Custom_Program_Invoice__c,Formula (Text),,FALSE,Show More
+Discount Amount,Discount_Amount__c,"Currency(16, 2)",,FALSE,Show More
+Discount Code,Discount_Code__c,Text(40),,FALSE,Show More
+Discount Expiry Date,Discount_Expiry_Date__c,Date,,FALSE,Show More
+Discount Percent,Discount_Percent__c,"Percent(16, 2)",,FALSE,Show More
+Exceed Invoice Number,Exceed_Invoice_Number__c,Text(20),,FALSE,Show More
+Exceed Order No,Exceed_Order_No__c,"Number(18, 0) (External ID) (Unique)",,TRUE,Show More
+Financial Transaction ID,Name,Auto Number,,TRUE,Show More
+FTLI,FTLI__c,Roll-Up Summary (COUNT FT Line Item),,FALSE,Show More
+Generate Invoice,Generate_Invoice__c,Checkbox,,FALSE,Show More
+Invoice Date,Invoice_Date__c,Date,,FALSE,Show More
+Invoice Number,Invoice_Number__c,Formula (Text),,FALSE,Show More
+Invoiced,Paid_By__c,Lookup(Contact),,TRUE,Show More
+Invoiced Sent,Invoiced_Sent__c,Date,,FALSE,Show More
+Last Modified By,LastModifiedById,Lookup(User),,FALSE,
+Open Enrollment Invoice,Open_Enrollment_Invoice__c,Formula (Text),,FALSE,Show More
+Owner,OwnerId,"Lookup(User,Group)",,TRUE,
+Paid Amount,Paid_Amount__c,"Currency(16, 2)",,FALSE,Show More
+Pay Type,Pay_Type__c,Picklist,,FALSE,Show More
+Payment Due,Payment_Due__c,Date,,FALSE,Show More
+Payment Received,Payment_Received__c,Date,,FALSE,Show More
+Program,Program__c,Lookup(Program),,TRUE,Show More
+Purchase Order/Letter of Credit,Purchase_Order_Letter_of_Credit__c,Text(30),,FALSE,Show More
+Receipt,Receipt__c,Text(80),,FALSE,Show More
+Status,Status__c,Picklist,,FALSE,Show More
+Total Amount,Amount__c,"Currency(16, 2)",,FALSE,Show More
+Transaction Name,Transaction_Name__c,Text(255),,FALSE,Show More
+Participant,,,,,
+Additional Faculty Comments,Additional_Faculty_Comments__c,Long Text Area(32768),,FALSE,Show More
+Adjusted Instructor Teaching Units,Adjusted_Instructor_Teaching_Units__c,"Number(5, 2)",,FALSE,Show More
+Amount,Amount__c,"Currency(16, 2)",,FALSE,Show More
+Application,Application__c,Lookup(Application),,TRUE,Show More
+Approve,Approve_All_Information_Correct_As_Li__c,Checkbox,,FALSE,Show More
+Attendance,Attendance__c,Picklist,,FALSE,Show More
+Attended,Attended__c,Checkbox,,FALSE,Show More
+Badge Name,Badge_Name__c,Formula (Text),,FALSE,Show More
+Balance,Balance__c,Formula (Currency),,FALSE,Show More
+Cancellation Fee,Cancellation_Fee__c,"Currency(16, 2)",,FALSE,Show More
+Class,Event__c,Lookup(Class),,TRUE,Show More
+Class has a Program,Class_has_a_program__c,Formula (Checkbox),,FALSE,Show More
+Class Name,Class_Name__c,Formula (Text),,FALSE,Show More
+Class Term,Class_Term__c,Formula (Text),,FALSE,Show More
+Co-Taught,Co_Taught__c,Picklist,,FALSE,Show More
+Completion Date,Completion_Date__c,Date,,FALSE,Show More
+Contact,Contact__c,Lookup(Contact),,TRUE,Show More
+Course Evaluation Open Date,Course_Evaluation_Open_Date__c,Picklist,,FALSE,Show More
+Course Evaluation Open Date Other,Course_Evaluation_Open_Date_Other__c,Text Area(255),,FALSE,Show More
+Course Evalution,Course_Evalution__c,"Number(16, 2)",,FALSE,Show More
+Created By,CreatedById,Lookup(User),,FALSE,
+Current Employment,Current_Employment__c,Lookup(Job History),,TRUE,Show More
+Discount Amount,Discount_Amount__c,"Currency(16, 2)",,FALSE,Show More
+Discount Code,Discount_Code__c,Text(20),,FALSE,Show More
+Enroll Cap,Enroll_Cap__c,"Number(18, 0)",,FALSE,Show More
+Enrollment Capacity Selection,Room_Capacity__c,Picklist,,FALSE,Show More
+Enrollment Status,Enrollment_Status__c,Text(100),,FALSE,Show More
+facilitator id,facilitator_id__c,"Number(18, 0) (External ID) (Unique)",,TRUE,Show More
+Faculty Submitted Date,Faculty_Submitted_Date__c,Date/Time,,FALSE,Show More
+Final Deliverable Dates,Final_Deliverable_Dates__c,Text Area(255),,FALSE,Show More
+Final Deliverable Type,Final_Deliverable_Type__c,Picklist,,FALSE,Show More
+Grade,Grade__c,"Number(3, 0)",,FALSE,Show More
+Grading Basis,Grading_Basis__c,Picklist,,FALSE,Show More
+Instructor Affiliation,Instructor_Affiliation__c,Picklist,,FALSE,Show More
+Instructor Evaluation,Instructor_Evaluation__c,"Number(5, 2)",,FALSE,Show More
+Instructor Role,Instructor_Role__c,Text(4),,FALSE,Show More
+Instructor Role Full Name,Instructor_Role_LDescr__c,Text(30),,FALSE,Show More
+JunctionKey,JunctionKey__c,Text(100) (External ID) (Unique Case Insensitive),,TRUE,Show More
+Last Modified By,LastModifiedById,Lookup(User),,FALSE,
+Mid-Term Exam,Mid_Term_Exam__c,Picklist,,FALSE,Show More
+Mid-Term Exam Dates,Mid_Term_Exam_Dates__c,Text Area(255),,FALSE,Show More
+Name Tags,Name_Tags__c,Formula (Text),,FALSE,Show More
+Number of Days of Instruction,Number_of_Days_of_Instruction__c,Text(5),,FALSE,Show More
+Order Item No,Order_Item_No__c,Text(50) (External ID) (Unique Case Insensitive),,TRUE,Show More
+Owner,OwnerId,"Lookup(User,Group)",,TRUE,
+Paid Amount,Paid_Amount__c,Roll-Up Summary (SUM Payment-Participant),,FALSE,Show More
+Participant ID,Name,Auto Number,,TRUE,Show More
+Participant Name,Participant_Name__c,Formula (Text),,FALSE,Show More
+Participation Average,Participation_Average__c,"Number(3, 0)",,FALSE,Show More
+Process Status,Process_Status__c,Picklist,,FALSE,Show More
+Program,Participant_Program__c,Formula (Text),,FALSE,Show More
+Program,Program__c,Lookup(Program),,TRUE,Show More
+PS_Status,PS_Status__c,Text(40),,FALSE,Show More
+Record Type,RecordTypeId,Record Type,,TRUE,
+Relationship,Relationship__c,Picklist,,FALSE,Show More
+Role,Role__c,Picklist,,FALSE,Show More
+Room Capacity Requested,Room_Cap_Request__c,"Number(18, 0)",,FALSE,Show More
+Send for Faculty Review,Send_for_Faculty_Review__c,Checkbox,,FALSE,Show More
+Status,Status__c,Picklist,,FALSE,Show More
+Student Group,Student_Group__c,Checkbox,,FALSE,Show More
+Student Groups Allowed,Student_Groups_Allowed__c,Picklist (Multi-Select),,FALSE,Show More
+TA Review Session,TA_Review_Session__c,Picklist,,FALSE,Show More
+TA Review Session Dates,TA_Review_Session_Dates__c,Long Text Area(32768),,FALSE,Show More
+Total Class Teaching Units,Total_Class_Teaching_Units__c,Formula (Number),,FALSE,Show More
+TU Difference,TU_Difference__c,Formula (Number),,FALSE,Show More
+Week,Week__c,Formula (Number),,FALSE,Show More
+Work Address,Work_Address__c,Formula (Text),,FALSE,Show More
+Expense,,,,,
+Amount,Amount__c,"Currency(16, 2)",,FALSE,Show More
+Contact,Contact__c,Lookup(Contact),,TRUE,Show More
+Created By,CreatedById,Lookup(User),,FALSE,
+Date,Date__c,Date,,FALSE,Show More
+Event/Class,Event_Class__c,Lookup(Class),,TRUE,Show More
+Expense Description,Expense_Description__c,Text Area(255),,FALSE,Show More
+Expense ID,Name,Auto Number,,TRUE,Show More
+Expense Type,Expense_Type__c,Picklist,,FALSE,Show More
+FT Line Item,FT_Line_Item__c,Lookup(FT Line Item),,TRUE,Show More
+Last Modified By,LastModifiedById,Lookup(User),,FALSE,
+Object Code,Object_Code__c,Text(50),,FALSE,Show More
+Owner,OwnerId,"Lookup(User,Group)",,TRUE,
+Program,Program__c,Lookup(Program),,TRUE,Show More
+Classes,,,,,
+Academic Career,Academic_Career__c,Text(4),,FALSE,Show More
+Academic Group,Academic_Group__c,Text(5),,FALSE,Show More
+Academic Group Full Name,Academic_Group_LDescr__c,Text(30),,FALSE,Show More
+Academic Organization,Academic_Organization__c,Text(10),,FALSE,Show More
+Assigned to Area Coordinator,Assigned_to_Area_Coordinator__c,Picklist,,FALSE,Show More
+Campus,Campus__c,Text(5),,FALSE,Show More
+Campus Name,Campus_LDescr__c,Picklist,,FALSE,Show More
+Catalog Number,Catalog_Nbr__c,Text(10),,FALSE,Show More
+Category,Category__c,Picklist (Multi-Select),,FALSE,Show More
+Chatter Last Modified,Chatter_Last_Modified__c,Date/Time,,FALSE,Show More
+Course code,course_code__c,Text(15) (External ID) (Unique Case Insensitive),,TRUE,Show More
+Course Contact Hours,Course_Contact_Hrs__c,"Number(5, 2)",,FALSE,Show More
+Course Fee,Course_Fee__c,"Currency(7, 2)",,FALSE,Show More
+Course Focus,Course_Focus__c,Rich Text Area(32768),,FALSE,Show More
+Course ID,Course_ID__c,Text(6),,FALSE,Show More
+Course Name,Name,Text(80),,TRUE,Show More
+Course Offering Current Flag,Course_Offering_Currnt_Flg__c,Text(1),,FALSE,Show More
+Course Offering Effective Status,Course_Offering_Eff_Status__c,Text(1),,FALSE,Show More
+Course Offering Valid From Date,Course_Offering_Vld_Frm_Dt__c,Date,,FALSE,Show More
+Course Offering Valid To Date,Course_Offering_Vld_To_Dt__c,Date,,FALSE,Show More
+Course Title,Course_Descr__c,Text(30),,FALSE,Show More
+Course Title Long,Course_Title_Long__c,Text(100),,FALSE,Show More
+Course URL,Course_URL__c,URL(255),,FALSE,Show More
+Created By,CreatedById,Lookup(User),,FALSE,
+Credit Hours,Credit_Hours__c,Formula (Text),,FALSE,Show More
+Default Class Teaching Units,Default_Class_Teaching_Units__c,"Number(5, 2)",,FALSE,Show More
+Delivery Method,Delivery_Method__c,Picklist,,FALSE,Show More
+eCornell Code,eCornell_Code__c,Text(50),,FALSE,Show More
+Enrollment Goal,Enrollment_Goal__c,"Number(18, 0)",,FALSE,Show More
+Footnote,Footnote__c,Rich Text Area(32768),,FALSE,Show More
+Grading Basis,Grading_Basis__c,Text(3),,FALSE,Show More
+Grading Basis Full Name,Grading_Basis_LDescr__c,Text(30),,FALSE,Show More
+Has Online Equivalents,Has_Online_Equivalents__c,Checkbox,,FALSE,Show More
+Institution,Institution__c,Text(5),,FALSE,Show More
+Institution Full Name,Institution_LDescr__c,Text(30),,FALSE,Show More
+Key Benefits,Key_Benefits__c,Rich Text Area(32768),,FALSE,Show More
+Last Modified By,LastModifiedById,Lookup(User),,FALSE,
+Level,Level__c,Picklist,,FALSE,Show More
+Owner,OwnerId,"Lookup(User,Group)",,TRUE,
+Program,Program__c,Lookup(Program),,TRUE,Show More
+Retired,Retired__c,Checkbox,,FALSE,Show More
+Show on Web,Show_on_Web__c,Checkbox,,FALSE,Show More
+SSR Component,SSR_Component__c,Picklist,,FALSE,Show More
+Subject,Subject__c,Text(8),,FALSE,Show More
+Subject Area,Subject_Area__c,Picklist,,FALSE,Show More
+Subject Full Name,Subject_LDescr__c,Text(30),,FALSE,Show More
+Subject Picklist,Subject_Picklist__c,Picklist,,FALSE,Show More
+Topics Include,Topics_Include__c,Rich Text Area(32768),,FALSE,Show More
+Type,Type__c,Picklist,,FALSE,Show More
+Type Activity,Type_Activity__c,Picklist,,FALSE,Show More
+Units Maximum,Units_Maximum__c,"Number(5, 2)",,FALSE,Show More
+Units Minimum,Units_Minimum__c,"Number(5, 2)",,FALSE,Show More
+Video URL,Video_URL__c,URL(255),,FALSE,Show More
+Courses,,,,,
+Academic Career,Academic_Career__c,Text(4),,FALSE,Show More
+Academic Group,Academic_Group__c,Text(5),,FALSE,Show More
+Academic Group Full Name,Academic_Group_LDescr__c,Text(30),,FALSE,Show More
+Academic Organization,Academic_Organization__c,Text(10),,FALSE,Show More
+Assigned to Area Coordinator,Assigned_to_Area_Coordinator__c,Picklist,,FALSE,Show More
+Campus,Campus__c,Text(5),,FALSE,Show More
+Campus Name,Campus_LDescr__c,Picklist,,FALSE,Show More
+Catalog Number,Catalog_Nbr__c,Text(10),,FALSE,Show More
+Category,Category__c,Picklist (Multi-Select),,FALSE,Show More
+Chatter Last Modified,Chatter_Last_Modified__c,Date/Time,,FALSE,Show More
+Course code,course_code__c,Text(15) (External ID) (Unique Case Insensitive),,TRUE,Show More
+Course Contact Hours,Course_Contact_Hrs__c,"Number(5, 2)",,FALSE,Show More
+Course Fee,Course_Fee__c,"Currency(7, 2)",,FALSE,Show More
+Course Focus,Course_Focus__c,Rich Text Area(32768),,FALSE,Show More
+Course ID,Course_ID__c,Text(6),,FALSE,Show More
+Course Name,Name,Text(80),,TRUE,Show More
+Course Offering Current Flag,Course_Offering_Currnt_Flg__c,Text(1),,FALSE,Show More
+Course Offering Effective Status,Course_Offering_Eff_Status__c,Text(1),,FALSE,Show More
+Course Offering Valid From Date,Course_Offering_Vld_Frm_Dt__c,Date,,FALSE,Show More
+Course Offering Valid To Date,Course_Offering_Vld_To_Dt__c,Date,,FALSE,Show More
+Course Title,Course_Descr__c,Text(30),,FALSE,Show More
+Course Title Long,Course_Title_Long__c,Text(100),,FALSE,Show More
+Course URL,Course_URL__c,URL(255),,FALSE,Show More
+Created By,CreatedById,Lookup(User),,FALSE,
+Credit Hours,Credit_Hours__c,Formula (Text),,FALSE,Show More
+Default Class Teaching Units,Default_Class_Teaching_Units__c,"Number(5, 2)",,FALSE,Show More
+Delivery Method,Delivery_Method__c,Picklist,,FALSE,Show More
+eCornell Code,eCornell_Code__c,Text(50),,FALSE,Show More
+Enrollment Goal,Enrollment_Goal__c,"Number(18, 0)",,FALSE,Show More
+Footnote,Footnote__c,Rich Text Area(32768),,FALSE,Show More
+Grading Basis,Grading_Basis__c,Text(3),,FALSE,Show More
+Grading Basis Full Name,Grading_Basis_LDescr__c,Text(30),,FALSE,Show More
+Has Online Equivalents,Has_Online_Equivalents__c,Checkbox,,FALSE,Show More
+Institution,Institution__c,Text(5),,FALSE,Show More
+Institution Full Name,Institution_LDescr__c,Text(30),,FALSE,Show More
+Key Benefits,Key_Benefits__c,Rich Text Area(32768),,FALSE,Show More
+Last Modified By,LastModifiedById,Lookup(User),,FALSE,
+Level,Level__c,Picklist,,FALSE,Show More
+Owner,OwnerId,"Lookup(User,Group)",,TRUE,
+Program,Program__c,Lookup(Program),,TRUE,Show More
+Retired,Retired__c,Checkbox,,FALSE,Show More
+Show on Web,Show_on_Web__c,Checkbox,,FALSE,Show More
+SSR Component,SSR_Component__c,Picklist,,FALSE,Show More
+Subject,Subject__c,Text(8),,FALSE,Show More
+Subject Area,Subject_Area__c,Picklist,,FALSE,Show More
+Subject Full Name,Subject_LDescr__c,Text(30),,FALSE,Show More
+Subject Picklist,Subject_Picklist__c,Picklist,,FALSE,Show More
+Topics Include,Topics_Include__c,Rich Text Area(32768),,FALSE,Show More
+Type,Type__c,Picklist,,FALSE,Show More
+Type Activity,Type_Activity__c,Picklist,,FALSE,Show More
+Units Maximum,Units_Maximum__c,"Number(5, 2)",,FALSE,Show More
+Units Minimum,Units_Minimum__c,"Number(5, 2)",,FALSE,Show More
+Video URL,Video_URL__c,URL(255),,FALSE,Show More
+Programs,,,,,
+# Capital Markets and Assets Management,Capital_Markets_and_Assets_Management__c,Roll-Up Summary (COUNT Enrollment),,FALSE,Show More
+# in Customized Option,in_Customized_Option__c,Roll-Up Summary (COUNT Enrollment),,FALSE,Show More
+# in Entrepreneurship,in_Entrepreneurship__c,Roll-Up Summary (COUNT Enrollment),,FALSE,Show More
+# in Investment Banking,in_Investment_Banking__c,Roll-Up Summary (COUNT Enrollment),,FALSE,Show More
+# in Managerial Finance,in_Managerial_Finance__c,Roll-Up Summary (COUNT Enrollment),,FALSE,Show More
+# in Private Equity,in_Private_Equity__c,Roll-Up Summary (COUNT Enrollment),,FALSE,Show More
+# in Semester in Strategic Operations,in_Semester_in_Strategic_Operations__c,Roll-Up Summary (COUNT Enrollment),,FALSE,Show More
+# in Strategic Marketing,in_Strategic_Marketing__c,Roll-Up Summary (COUNT Enrollment),,FALSE,Show More
+# in Sustainable Global Enterprise,in_Sustainable_Global_Enterprise__c,Roll-Up Summary (COUNT Enrollment),,FALSE,Show More
+Academic Plan,Academic_Plan__c,Text(200),,FALSE,Show More
+Admissions Contact,Admissions_Contact__c,Lookup(User),,TRUE,Show More
+Admissions Start Term,Admissions_Start_Term__c,Text(255),,FALSE,Show More
+Application Fee,Price__c,"Currency(18, 0)",,FALSE,Show More
+Applications Close Date,Applications_Close_Date__c,Date,,FALSE,Show More
+Applications Open,Applications_Open__c,Formula (Checkbox),,FALSE,Show More
+Applications Open Date,Applications_Open_Date__c,Date,,FALSE,Show More
+Automated Emails Contact,Automated_Emails_Contact__c,Lookup(Contact),,TRUE,Show More
+Community Access,Community_Access__c,Checkbox,,FALSE,Show More
+Created By,CreatedById,Lookup(User),,FALSE,
+Deposit Amount1,Deposit_Amount1__c,"Currency(18, 0)",,FALSE,Show More
+Deposit Amount2,Deposit_Amount2__c,"Currency(18, 0)",,FALSE,Show More
+Details,Details__c,Text Area(255),,FALSE,Show More
+End Date,End_Date__c,Date,,FALSE,Show More
+Institution,Institution__c,Text Area(255),,FALSE,Show More
+Last Modified By,LastModifiedById,Lookup(User),,FALSE,
+Lead Record Type API Name,Lead_Record_Type_API_Name__c,Formula (Text),,FALSE,Show More
+Location,Location__c,Text(255),,FALSE,Show More
+Owner,OwnerId,"Lookup(User,Group)",,TRUE,
+Program,Program__c,Picklist,,FALSE,Show More
+Program Email,Program_Email__c,Email,,FALSE,Show More
+Program Group,Program_Group__c,Text(255),,FALSE,Show More
+Program Name,Name,Text(80),,TRUE,Show More
+Program Phone,Program_Phone__c,Phone,,FALSE,Show More
+Program Type,Program_Type__c,Picklist,,FALSE,Show More
+Register Through,Register_Through__c,Picklist (Multi-Select),,FALSE,Show More
+Reply To Address Display Name,Reply_To_Address__c,Text(128),,FALSE,Show More
+Slug,Slug__c,Formula (Text),,FALSE,Show More
+Start Date,Start_Date__c,Date,,FALSE,Show More
+Students Currently Enrolled,Students_Currently_Enrolled__c,Roll-Up Summary (COUNT Enrollment),,FALSE,Show More
+Total Tuition Amount,Total_Tuition_Amount__c,"Currency(16, 2)",,FALSE,Show More
+VM Merchant ID,VM_Merchant_ID__c,Text (Encrypted)(175),,FALSE,Show More
+VM Merchant PIN,VM_Merchant_PIN__c,Text (Encrypted)(175),,FALSE,Show More
+VM User ID,VM_User_ID__c,Text (Encrypted)(175),,FALSE,Show More
+VM User PIN,VM_User_PIN__c,Text (Encrypted)(175),,FALSE,Show More
+Evaluations,,,,,
+Class Question 1,Class_Question_1__c,Picklist,,FALSE,Show More
+Class Question 2,Class_Question_2__c,Picklist,,FALSE,Show More
+Class Question 3,Class_Question_3__c,Picklist,,FALSE,Show More
+Class Question 4,Class_Question_4__c,Picklist,,FALSE,Show More
+Class Question 5,Class_Question_5__c,Picklist,,FALSE,Show More
+Class Rating,Class_Rating__c,"Number(2, 0)",,FALSE,Show More
+Created By,CreatedById,Lookup(User),,FALSE,
+Evaluation ID,Name,Auto Number,,TRUE,Show More
+Event/Class,Event_Class__c,Lookup(Class),,TRUE,Show More
+Faculty,Faculty__c,Lookup(Participant),,TRUE,Show More
+Faculty Name,Faculty_Name__c,Formula (Text),,FALSE,Show More
+Faculty Rating,Faculty_Rating__c,"Number(2, 0)",,FALSE,Show More
+Instructor Question 1,Instructor_Question_1__c,Picklist,,FALSE,Show More
+Instructor Question 2,Instructor_Question_2__c,Picklist,,FALSE,Show More
+Instructor Question 3,Instructor_Question_3__c,Picklist,,FALSE,Show More
+Instructor Question 4,Instructor_Question_4__c,Picklist,,FALSE,Show More
+Instructor Question 5,Instructor_Question_5__c,Picklist,,FALSE,Show More
+Last Modified By,LastModifiedById,Lookup(User),,FALSE,
+Open Question 1,Open_Question_1__c,Text Area(255),,FALSE,Show More
+Open Question 2,Open_Question_2__c,Text Area(255),,FALSE,Show More
+Owner,OwnerId,"Lookup(User,Group)",,TRUE,
+Participant,Participant__c,Lookup(Participant),,TRUE,Show More
+Prerequisites,,,,,
+Course has a Prerequisite,Course_2__c,Lookup(Course),,TRUE,Show More
+Created By,CreatedById,Lookup(User),,FALSE,
+Last Modified By,LastModifiedById,Lookup(User),,FALSE,
+Name,Name,Auto Number,,TRUE,Show More
+Owner,OwnerId,"Lookup(User,Group)",,TRUE,
+Prerequisite,Course_1__c,Lookup(Course),,TRUE,Show More
+Type,Type__c,Picklist,,FALSE,Show More
+Certifications,,,,,
+Accred,Accred__c,Long Text Area(32768),,FALSE,Show More
+Category,Category__c,Picklist,,FALSE,Show More
+cert_online_code,cert_online_code__c,Text(50) (External ID) (Unique Case Sensitive),,TRUE,Show More
+Certification Code,cert_code__c,Text(50) (External ID) (Unique Case Insensitive),,TRUE,Show More
+Certification Footer for Web Site,Certification_Footer_for_Web_Site__c,Rich Text Area(32768),,FALSE,Show More
+Certification Issue Date,Certification_Issue_Date__c,Date,,FALSE,Show More
+Certification/Certificate Name,Name,Text(80),,TRUE,Show More
+Created By,CreatedById,Lookup(User),,FALSE,
+CUOnline Description,CUOnline_Description__c,Long Text Area(32768),,FALSE,Show More
+CUOnline Description Short,CUOnline_Description_Short__c,Long Text Area(32768),,FALSE,Show More
+Description,Description__c,Long Text Area(32768),,FALSE,Show More
+Description Short,Description_Short__c,Long Text Area(32768),,FALSE,Show More
+eCornell Code,eCornell_Code__c,Text(50),,FALSE,Show More
+Elective Caption,Elective_Caption__c,Long Text Area(32768),,FALSE,Show More
+Information,Information__c,Long Text Area(32768),,FALSE,Show More
+Last Modified By,LastModifiedById,Lookup(User),,FALSE,
+Number of Courses for Completion,Number_of_Courses_for_Completion__c,"Number(2, 0)",,FALSE,Show More
+Number of Years to Complete,Number_of_Years_to_Complete__c,"Number(2, 0)",,FALSE,Show More
+Online,Online__c,Checkbox,,FALSE,Show More
+Program,Program__c,Master-Detail(Program),,TRUE,Show More
+Requirement Caption,Requirement_Caption__c,Long Text Area(32768),,FALSE,Show More
+Retired,Retired__c,Checkbox,,FALSE,Show More
+Short Certificate Title,Short_Certificate_Title__c,Text(40),,FALSE,Show More
+Video URL,Video_URL__c,URL(255),,FALSE,Show More
+Web View,Web_View__c,Checkbox,,FALSE,Show More
+Who,Who__c,Long Text Area(32768),,FALSE,Show More
+Certifications Classes,,,,,
+Class,Event__c,Lookup(Class),,TRUE,Show More
+Created By,CreatedById,Lookup(User),,FALSE,
+Educational History,Educational_History__c,Lookup(Certification History),,TRUE,Show More
+Error Message,Error_Message__c,Text Area(255),,FALSE,Show More
+Event End Date,Event_End_Date__c,Formula (Date/Time),,FALSE,Show More
+Event Start Date,Event_Start_Date__c,Formula (Date/Time),,FALSE,Show More
+Exceed Cert Progress ID,Exceed_Cert_Progress_ID__c,Text(50) (External ID) (Unique Case Insensitive),,TRUE,Show More
+Last Modified By,LastModifiedById,Lookup(User),,FALSE,
+Owner,OwnerId,"Lookup(User,Group)",,TRUE,
+Special Authorization,Special_Authorization__c,Picklist,,FALSE,Show More
+Special Authorization Note,Special_Authorization_Note__c,Long Text Area(32768),,FALSE,Show More
+Sys Ref ID,Name,Auto Number,,TRUE,Show More
+Course-Certification,,,,,
+Course-Certification1,Course_Certification1__c,Lookup(Certification Course),,TRUE,Show More
+Course-Certification2,Course_Certification2__c,Lookup(Certification Course),,TRUE,Show More
+Created By,CreatedById,Lookup(User),,FALSE,
+Equivalent Requirement Name,Name,Text(80),,TRUE,Show More
+extID,extID__c,Text(50) (External ID) (Unique Case Sensitive),,TRUE,Show More
+Last Modified By,LastModifiedById,Lookup(User),,FALSE,
+Owner,OwnerId,"Lookup(User,Group)",,TRUE,
+Course-Certification1,Course_Certification1__c,Lookup(Certification Course),,TRUE,Show More
+Course-Certification2,Course_Certification2__c,Lookup(Certification Course),,TRUE,Show More
+Created By,CreatedById,Lookup(User),,FALSE,
+Equivalent Requirement Name,Name,Text(80),,TRUE,Show More
+extID,extID__c,Text(50) (External ID) (Unique Case Sensitive),,TRUE,Show More
+Last Modified By,LastModifiedById,Lookup(User),,FALSE,
+Owner,OwnerId,"Lookup(User,Group)",,TRUE,
+Discount Codes,,,,,
+Created By,CreatedById,Lookup(User),,FALSE,
+Discount Amount,Discount_Amount__c,"Currency(16, 2)",,FALSE,Show More
+Discount Code Name,Name,Text(80),,TRUE,Show More
+Discount Description,Discount_Description__c,Long Text Area(500),,FALSE,Show More
+Discount End Date,Discount_End_Date__c,Date,,FALSE,Show More
+Discount Percent,Discount_Percent__c,"Percent(3, 2)",,FALSE,Show More
+Discount Start Date,Discount_Start_Date__c,Date,,FALSE,Show More
+Discount Type,Discount_Type__c,Picklist,,FALSE,Show More
+Expiry Date,Expiry_Date__c,Date,,FALSE,Show More
+Last Modified By,LastModifiedById,Lookup(User),,FALSE,
+Owner,OwnerId,"Lookup(User,Group)",,TRUE,
+Volume,Volume__c,"Number(18, 0)",,FALSE,Show More
+Faculty Compensation,,,,,
+Additional Compensation,Addl_Comp__c,"Currency(16, 2)",,FALSE,Show More
+Addl Comp Notes,Addl_Comp_Notes__c,Text(255),,FALSE,Show More
+Airfare,Airfare__c,"Currency(16, 2)",,FALSE,Show More
+Appointment Letter Cancellation Fee,Appt_Letter__c,Formula (Currency),,FALSE,Show More
+CP Faculty Compensation Name,Name,Auto Number,,TRUE,Show More
+Created By,CreatedById,Lookup(User),,FALSE,
+Days of Instruction,Days_of_Instruction__c,"Number(16, 2)",,FALSE,Show More
+e-Req #,e_Req__c,"Number(18, 0)",,FALSE,Show More
+e-Req Total,e_Req_Total__c,"Currency(16, 2)",,FALSE,Show More
+Expense Rate,CP_Rate__c,Lookup(CP Rate),,TRUE,Show More
+F&B,F_B__c,"Currency(16, 2)",,FALSE,Show More
+Filtered Report,Report__c,Checkbox,,FALSE,Show More
+Fringe Rate,Fringe_Rate__c,Formula (Currency),,FALSE,Show More
+Ground Transport & Parking,Parking__c,"Currency(16, 2)",,FALSE,Show More
+Hours of Instruction,Hours_of_Instruction__c,Formula (Number),,FALSE,Show More
+Instruction Cost,Instruction_Cost__c,Formula (Currency),,FALSE,Show More
+Instructor,Instructor__c,Lookup(Contact),,TRUE,Show More
+Last Modified By,LastModifiedById,Lookup(User),,FALSE,
+Miscellaneous,Miscellaneous__c,"Currency(16, 2)",,FALSE,Show More
+Payroll Account,Payroll_Account__c,Text(255),,FALSE,Show More
+Per Diem,Per_Diem__c,"Currency(16, 2)",,FALSE,Show More
+Personal Mileage,Personal_Mileage__c,"Currency(16, 2)",,FALSE,Show More
+Program,Custom_Program__c,Master-Detail(Program),,TRUE,Show More
+Record Type,RecordTypeId,Record Type,,TRUE,
+Status,Status__c,Picklist,,FALSE,Show More
+Sub Total Instruction and Travel,Sub_Total_Instruction_and_Travel__c,Formula (Currency),,FALSE,Show More
+Target Pay Date,Target_Pay_Date__c,Date,,FALSE,Show More
+Total Expenses Billed to Client,Total_Expenses_Billed_to_Client__c,Formula (Currency),,FALSE,Show More
+Total Reimbursable Expenses,Total_Reimbursable_Expenses__c,Formula (Currency),,FALSE,Show More
+Total without Airfare,Total_without_Airfare__c,Formula (Currency),,FALSE,Show More
+Travel Expenses Total,Travel_Expenses_Total__c,Formula (Currency),,FALSE,Show More
+Travel Time Cost,Travel_Time_Cost__c,Formula (Currency),,FALSE,Show More
+Travel Zone,Travel_Zone__c,"Number(1, 0)",,FALSE,Show More
+Trip Reimbursement #,Trip_Reimbursement__c,"Number(18, 0)",,FALSE,Show More
+Trip Reimbursement Total,Trip_Reimbursement_Total__c,"Currency(16, 2)",,FALSE,Show More
