@@ -6,22 +6,36 @@ from os.path import splitext
 from termcolor import colored
 
 class CsvDiff:
-    def __init__(self, original_fname, changed_fname):
-        self.original_data = self.open_file(original_fname)
-        self.changed_data = self.open_file(changed_fname)
-        self.diff = self.__make_diff()
-        o_name, o_ext = splitext(original_fname)
-        c_name, c_ext = splitext(changed_fname)
-        self.report_file_name =  o_name + "_diff_" + c_name + ".txt"
+    def __init__(self, original, changed, isFile=True):
+        if isFile:
+            self.original_data = self.open_file(original)
+            self.changed_data = self.open_file(changed)
+            self.diff = self.__make_diff()
+            o_name, o_ext = splitext(original)
+            c_name, c_ext = splitext(changed)
+            self.report_file_name =  o_name + "_diff_" + c_name + ".txt"
+        else:
+            self.original_data = original
+            self.changed_data = changed
+            self.diff = self.__make_diff()
     def get_diff(self):
-        return self.diff
+        diff = self.diff
+        diff_str = ""
+        for d in diff:
+            if d.startswith("+"):
+                diff_str += d
+            elif d.startswith("-"):
+                diff_str += d
+            elif d.startswith("?"):
+                diff_str += d
+        return diff_str
     def __make_diff(self):
         differ = difflib.Differ()
         diff = differ.compare(self.original_data, self.changed_data)
         return diff
 
     def print_diff(self):
-        diff = self.__make_diff()
+        diff = self.diff
         for d in diff:
             if d.startswith("+"):
                 print (colored(d, "green"))
@@ -29,8 +43,7 @@ class CsvDiff:
                 print (colored(d, "red"))
             elif d.startswith("?"):
                 print (colored(d, "blue"))
-            else:
-                print(d)
+
     def separate_diff(self, diff):
         added_entries = []
         removed_entries = []

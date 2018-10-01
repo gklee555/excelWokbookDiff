@@ -7,18 +7,28 @@ from xlrd.sheet import ctype_text
 from csvDiff import CsvDiff
 
 class WorkbookDiff():
-    def __init__(self, wb_old, wb_new):
-        self.old_wb_fname = wb_old
-        self.new_wb_fname =wb_new
-        self.old_wb = xlrd.open_workbook(wb_old)
-        self.new_wb =xlrd.open_workbook(wb_old)
+    def __init__(self, old_wb_fn, new_wb_fn):
+        self.old_wb_fname = old_wb_fn
+        self.new_wb_fname = new_wb_fn
+        self.old_wb = xlrd.open_workbook(old_wb_fn)
+        self.new_wb =xlrd.open_workbook(new_wb_fn)
 
         #separate the contents of each sheet into csv files
         #original_fields"{some sheet name}"] returns a list of csv lines for the
         #sheet with name {some sheet name}
     def make_diff(self):
         old_sheet_map = self.wb_sheet_map(self.old_wb)
+        new_sheet_map = self.wb_sheet_map(self.new_wb)
+        #get all sheet names from both
+        sheet_names_set = set(sum([self.old_wb.sheet_names(), self.new_wb.sheet_names()],[]))
+        diff_map = {}
+        for name in sheet_names_set:
+            old_data = old_sheet_map.get(name,"")
+            new_data = new_sheet_map.get(name,"")
 
+            cDiff = CsvDiff(old_data, new_data, False)
+            diff = cDiff.get_diff()
+            print(diff)
     def wb_sheet_map(self, wb_obj):
         sheet_map = {}
         sheet_names = wb_obj.sheet_names()
@@ -29,15 +39,15 @@ class WorkbookDiff():
         return sheet_map
 
     def sheet_to_csv(self, xl_sheet):
-        csv_str = ""
+        csv_list= []
         for rownum in range(xl_sheet.nrows):
             bstr_list = ([str(val).encode('utf8') for val in xl_sheet.row_values(rownum)])
             #This is dumb, change this entire function
             csv_row_str = ""
             for byte_val in bstr_list:
                 csv_row_str += byte_val.decode('utf8') + ","
-            csv_str += csv_row_str + "\n"
-        return csv_str
+            csv_list.append(csv_row_str + "\n")
+        return csv_list
 
     def read_whole_file(self, file_name):
         file_data = []
