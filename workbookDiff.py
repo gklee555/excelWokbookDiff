@@ -2,6 +2,7 @@ from __future__ import print_function
 from os.path import join, dirname, abspath, isfile
 from collections import Counter
 import xlrd
+import csv
 from xlrd.sheet import ctype_text
 from csvDiff import CsvDiff
 
@@ -23,17 +24,20 @@ class WorkbookDiff():
         sheet_names = wb_obj.sheet_names()
         for sheet_name in sheet_names:
             sheet = wb_obj.sheet_by_name(sheet_name)
-            shee_csv = self.sheet_to_csv(sheet)
-            print("test map")
-            print(sheet_name)
-            print(sheet)
-            sheet_map[sheet_name] = sheet
+            sheet_csv = self.sheet_to_csv(sheet)
+            sheet_map[sheet_name] = sheet_csv
         return sheet_map
+
     def sheet_to_csv(self, xl_sheet):
-        csv_sheet = ""
-        for i in range(0, xl_sheet.nrows):
-             csv_sheet += ",".join(xl_sheet.row(i)) + "\n"
-        return csv_sheet
+        csv_str = ""
+        for rownum in range(xl_sheet.nrows):
+            bstr_list = ([str(val).encode('utf8') for val in xl_sheet.row_values(rownum)])
+            #This is dumb, change this entire function
+            csv_row_str = ""
+            for byte_val in bstr_list:
+                csv_row_str += byte_val.decode('utf8') + ","
+            csv_str += csv_row_str + "\n"
+        return csv_str
 
     def get_excel_sheet_object(self, fname, idx=0):
         if not isfile(fname):
@@ -106,7 +110,12 @@ class WorkbookDiff():
                 break
             get_column_stats(xl_sheet, col_idx)
 
-
+    def read_whole_file(self, file_name):
+        file_data = []
+        with open(file_name, 'r') as file:
+            for line in file:
+                file_data.append(line)
+        return file_data
 
 
 def main(self, original_xl_fname, changed_xl_fname):

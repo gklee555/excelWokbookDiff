@@ -29,6 +29,8 @@ class CsvDiff:
                 print (colored(d, "red"))
             elif d.startswith("?"):
                 print (colored(d, "blue"))
+            else:
+                print(d)
     def separate_diff(self, diff):
         added_entries = []
         removed_entries = []
