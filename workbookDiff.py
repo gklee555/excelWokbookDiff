@@ -28,7 +28,8 @@ class WorkbookDiff():
 
             cDiff = CsvDiff(old_data, new_data, False)
             diff = cDiff.get_diff()
-            print(diff)
+
+            diff_map[name] = diff
     def wb_sheet_map(self, wb_obj):
         sheet_map = {}
         sheet_names = wb_obj.sheet_names()
