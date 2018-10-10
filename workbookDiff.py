@@ -5,6 +5,7 @@ import xlrd
 import csv
 from xlrd.sheet import ctype_text
 from csvDiff import CsvDiff
+from diffReport import DiffReport
 
 class WorkbookDiff():
     def __init__(self, old_wb_fn, new_wb_fn):
@@ -12,6 +13,8 @@ class WorkbookDiff():
         self.new_wb_fname = new_wb_fn
         self.old_wb = xlrd.open_workbook(old_wb_fn)
         self.new_wb =xlrd.open_workbook(new_wb_fn)
+        self.target_file = old_wb_fn[0: old_wb_fn.find(".")] + "_diff_" + new_wb_fn[0: new_wb_fn.find(".")] + ".txt"
+        self.diffs = self.make_diff()
 
         #separate the contents of each sheet into csv files
         #original_fields"{some sheet name}"] returns a list of csv lines for the
@@ -30,6 +33,9 @@ class WorkbookDiff():
             diff = cDiff.get_diff()
 
             diff_map[name] = diff
+        return diff_map
+    #maps the names of all sheets in both workbooks to their diffs. Only computes
+    #diff for sheets with the same name
     def wb_sheet_map(self, wb_obj):
         sheet_map = {}
         sheet_names = wb_obj.sheet_names()
@@ -56,6 +62,13 @@ class WorkbookDiff():
             for line in file:
                 file_data.append(line)
         return file_data
+
+    def make_report(self):
+        diff_map = self.diffs
+        for name in diff_map:
+            DiffReport(name, diff_map[name], self.target_file)
+
+
 
 
 def main(self, original_xl_fname, changed_xl_fname):
