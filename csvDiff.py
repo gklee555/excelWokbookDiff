@@ -29,6 +29,17 @@ class CsvDiff:
             elif d.startswith("?"):
                 diff_str += d
         return diff_str
+    def get_diff_list(self):
+        diff = self.diff
+        diff_list = []
+        for d in diff:
+            if d.startswith("+"):
+                diff_list.append(d)
+            elif d.startswith("-"):
+                diff_list.append(d)
+            elif d.startswith("?"):
+                diff_list.append(d)
+        return diff_list
     def __make_diff(self):
         differ = difflib.Differ()
         diff = differ.compare(self.original_data, self.changed_data)

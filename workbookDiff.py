@@ -30,7 +30,7 @@ class WorkbookDiff():
             new_data = new_sheet_map.get(name,"")
 
             cDiff = CsvDiff(old_data, new_data, False)
-            diff = cDiff.get_diff()
+            diff = cDiff.diff
 
             diff_map[name] = diff
         return diff_map
@@ -56,12 +56,12 @@ class WorkbookDiff():
             csv_list.append(csv_row_str + "\n")
         return csv_list
 
-    def read_whole_file(self, file_name):
-        file_data = []
-        with open(file_name, 'r') as file:
-            for line in file:
-                file_data.append(line)
-        return file_data
+    # def read_whole_file(self, file_name):
+    #     file_data = []
+    #     with open(file_name, 'r') as file:
+    #         for line in file:
+    #             file_data.append(line)
+    #     return file_data
 
     def make_report(self):
         diff_map = self.diffs
