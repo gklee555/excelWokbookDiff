@@ -15,4 +15,5 @@ B = "Execed Executive Education Objects.xlsx"
 md = MultiDiff(old, A, B)
 
 obj_map = md.obj_map
+# print(obj_map['Account'])
 md.report("ABC.xlsx")

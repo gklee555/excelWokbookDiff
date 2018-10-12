@@ -17,7 +17,7 @@ class CsvDiff:
         else:
             self.original_data = original
             self.changed_data = changed
-            self.diff = self.__make_diff()
+            self.diff = self.get_diff_list()
     def get_diff(self):
         diff = self.diff
         diff_str = ""
@@ -30,7 +30,7 @@ class CsvDiff:
                 diff_str += d
         return diff_str
     def get_diff_list(self):
-        diff = self.diff
+        diff = self.__make_diff()
         diff_list = []
         for d in diff:
             if d.startswith("+"):

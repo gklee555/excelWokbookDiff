@@ -28,18 +28,29 @@ class MultiDiff():
             # print("\n\nName: " + obj_name)
             # print("\nDiff B: " +dmap_B[obj_name])
             # print("\nDiff A: " +dmap_C[obj_name])
+            print("OBJECT : " + obj_name + "XXXXXXXXXXXXXXXXX")
             object_diffs[obj_name] = self.multi_object_diff(dmap_B[obj_name], dmap_C[obj_name])
         return object_diffs
 
     def multi_object_diff(self, B_diffs, C_diffs):
         elem_diffs= {}
+        #TODO FIX secondary_changes??
         B_changes = self.secondary_changes(B_diffs)
         C_changes = self.secondary_changes(C_diffs)
         A_changes = self.primary_changes(B_diffs, C_diffs)
+        # print("\nB CHanges: \n")
+        # print(B_changes)
+        # print("\nA CHanges: \n")
+        # print(A_changes)
         for elem_name in A_changes:
+            # print("\n Elem Name")
+            # print(elem_name)
             if(not (elem_name in B_changes)):
+                # print("\nSWAP B")
+                # print(elem_name)
                 B_changes[elem_name] = A_changes[elem_name]
             if(not (elem_name in C_changes)):
+                # print("\nSWAP B")
                 C_changes[elem_name] = A_changes[elem_name]
 
             # print("\nA Val: " +  A_changes[elem_name])
@@ -50,12 +61,17 @@ class MultiDiff():
                 self.B_name : B_changes[elem_name],
                 self.C_name : C_changes[elem_name]
             }
+            # print("\nElem diffs: ")
+            # print( elem_diffs)
+
+
         return elem_diffs
     # is a dict with structure:
     # {elem:change}
     # where elem is the first csv in a string element of difflist and change is
     # the rest of the string element given that the type is + and "" given that
     # the type is -
+    #TODO TODO TODO SWAP SIGNS FOR TYPE!!!
     def secondary_changes(self, difflist):
         changes = {}
         for diff in difflist:
@@ -68,8 +84,24 @@ class MultiDiff():
             # print("\nname: " + name)
             # print("\nType: " + type)
             # print("\nValue: " + values)
-            if(type=="+"): changes[name]=values
-            elif(type=="-" and not (name in changes)):changes[name]="NA"
+            if(type=="+"):
+                # print("+ change")
+                if(name in changes and values):
+                    print(values)
+                    changes[name]=values
+                else:
+                    print("YEET")
+            elif((type=="-") and ((name not in changes))):
+                # print("- change")
+                changes[name]="NA"
+            elif(type!="?"):
+                # print("\nShould already exist: ")
+                # print(name)
+                # print(changes)
+                # raise Exception('Elem not correctly added: ')
+                test = changes[name]
+        # print("\nChanges: \n")
+        # print(changes)
         return changes
     def primary_changes(self, difflistB, difflistC):
         changes = {}
@@ -79,21 +111,37 @@ class MultiDiff():
             name_delim = diff.find(",")
             name = diff[2:name_delim]
             values = diff[name_delim+1:]
-            if(type=="-" and not (name in changes)):changes[name]="NA"
-            elif(type=="+"): changes[name]=values
+            if(type=="-" and not (name in changes)):changes[name]=values
+            elif(type=="+"): changes[name]="NA"
+        # print("\nA Changes 1 :")
+        # print(changes)
         #get the elements A that were not in C
-        for diff in difflistB:
+        for diff in difflistC:
             type = diff[0]
             name_delim = diff.find(",")
             name = diff[2:name_delim]
             values = diff[name_delim+1:]
-            if(type=="-" and not (name in changes)):changes[name]="NA"
-            elif(type=="+"): changes[name]=values
+            if((type=="-") and not (name in changes)):changes[name]=values
+            elif(type=="+"): changes[name]="NA"
         return changes
     def report(self, dest_path="!"):
+
         if (dest_path=="!"):
             dest_path = self.default_dest
         report_wb = xlwt.Workbook()
-        print(self.obj_map)
+        org_idx = {
+            self.A_name :1,
+            self.B_name : 2,
+            self.C_name : 3
+        }
+        for obj_name in self.obj_map:
+            sheet = report_wb.add_sheet(obj_name)
+            elem_map = self.obj_map[obj_name]
+            for rownum, elem_name in enumerate(elem_map):
+                sheet.write(rownum, 0, elem_name)
+                org_map = elem_map[elem_name]
+                for org in org_map:
+                    sheet.write(rownum, org_idx[org], org_map[org])
+
         test_sheet = report_wb.add_sheet("Test")
         report_wb.save(dest_path)
