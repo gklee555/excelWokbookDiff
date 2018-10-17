@@ -12,6 +12,7 @@ class WorkbookDiff():
         self.old_wb_fname = old_wb_fn
         self.new_wb_fname = new_wb_fn
         self.old_wb = xlrd.open_workbook(old_wb_fn)
+        print(new_wb_fn)
         self.new_wb =xlrd.open_workbook(new_wb_fn)
         self.target_file = old_wb_fn[0: old_wb_fn.find(".")] + "_diff_" + new_wb_fn[0: new_wb_fn.find(".")] + ".txt"
         self.diffs = self.make_diff()
