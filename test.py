@@ -7,22 +7,23 @@ from multidiff import MultiDiff
 #
 #
 # wbd.make_report()
-test_exceed = False
+test_exceed = True
+test_abc = False
 if (test_exceed):
-    old = "Production Executive Education Objects.xlsx"
-    A = "FullSB Executive Education Objects.xlsx"
-    B = "Execed Executive Education Objects.xlsx"
+    old =  "Execed Workbooks/Production.xlsx"
+    A = "Execed Workbooks/FullSB.xlsx"
+    B ="Execed Workbooks/Execed.xlsx"
 
     md_execed = MultiDiff(old, A, B)
 
     md_execed.report("Exceded Report.xlsx")
 
 #Test WBs
+if test_abc:
+    TestA = "Test Workbooks/WB A.xlsx"
+    TestB = "Test Workbooks/WB B.xlsx"
+    TestC = "Test Workbooks/WB C.xlsx"
 
-TestA = "Test Workbooks/WB A.xlsx"
-TestB = "Test Workbooks/WB B.xlsx"
-TestC = "Test Workbooks/WB C.xlsx"
+    md_abc = MultiDiff(TestA, TestB, TestC)
 
-md_abc = MultiDiff(TestA, TestB, TestC)
-
-md_abc.report("ABC.xlsx")
+    md_abc.report("ABC.xlsx")
