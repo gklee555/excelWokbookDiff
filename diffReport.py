@@ -31,7 +31,7 @@ class DiffReport():
         else:
             self.report_items = ReportItem(diff_type, row_name, row_values, None)
 
-    def report(self):LabelSorted
+    def report(self):
         self.format_items()
         with open(self.target, "a") as report:
             report.write(self.header_report())

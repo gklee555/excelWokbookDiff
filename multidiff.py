@@ -56,6 +56,7 @@ class MultiDiff():
                 dmap_B[obj_name] = ""
             if not (obj_name in dmap_C):
                 dmap_C[obj_name] = ""
+            print(obj_name)
             object_diffs[obj_name] = self.multi_object_diff(dmap_B[obj_name], dmap_C[obj_name])
         return object_diffs
 
@@ -89,10 +90,17 @@ class MultiDiff():
     #   -"NA" if type = - and there is not already a value
     def secondary_changes(self, difflist):
         changes = {}
+        dup_name = {}
         for diff in difflist:
             type = diff[0]
             name_delim = diff.find(",")
             name = diff[2:name_delim]
+            if name in dup_name:
+                dup_name[name] += 1
+                name = name + str(dup_name[name])
+            else:
+                dup_name[name] = 0
+
             values = diff[name_delim+1:]
             if(type=="+"):
                 changes[name]=values #when their is an "+" diff the change value
@@ -103,27 +111,48 @@ class MultiDiff():
         return changes
     def primary_changes(self, difflistB, difflistC):
         changes = {}
+        dup_name = {}
         #get the elements A that were not in B
         for diff in difflistB:
             type = diff[0]
             name_delim = diff.find(",")
             name = diff[2:name_delim]
+            if name in dup_name:
+                dup_name[name] += 1
+                name = name + str(dup_name[name])
+            else:
+                dup_name[name] = 0
+
             values = diff[name_delim+1:]
+
             if(type=="-"):
                 changes[name]=values
             elif(type=="+" and (name not in changes)):
                 changes[name]="NA"
 
         #get the elements A that were not in C
+        dup_name = {}
         for diff in difflistC:
             type = diff[0]
             name_delim = diff.find(",")
             name = diff[2:name_delim]
+            if name in dup_name:
+                dup_name[name] += 1
+                name = name + str(dup_name[name])
+            else:
+                dup_name[name] = 0
+
             values = diff[name_delim+1:]
             if(type=="-"):
                 if(name in changes):
                     if(changes[name] != values):
-                            raise Exception('Diff values for A not  consistent for elem: {}'.format(name))
+                        if name in dup_name:
+                            dup_name[name] += 1
+                        else:
+                            dup_name[name] = 0
+                        name = name + str(dup_name[name])
+
+
                 changes[name]=values
             elif(type=="+")and (name not in changes):
                 changes[name]="NA"
