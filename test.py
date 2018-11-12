@@ -16,7 +16,7 @@ if (test_exceed):
 
     md_execed = MultiDiff(old, A, B)
 
-    md_execed.report("Exceded Report.xlsx")
+    md_execed.report("Execed Report.xlsx")
 
 #Test WBs
 if test_abc:
